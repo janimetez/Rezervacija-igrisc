@@ -1,2 +1,2 @@
-# Rezervacija-igrisc
-Projektna naloga pri predmetu UVP
+# Rezervacija igrisc
+Projektna naloga pri predmetu Uvod v programiranje.
