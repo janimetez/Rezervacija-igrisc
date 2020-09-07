@@ -1,0 +1,30 @@
+% rebase('base.html', ROOT=ROOT, stanje=stanje)
+
+<h1>Vsa igrišča, na katerih lahko rezervirate termin:</h1>
+
+<table cellpadding="0" cellspacing="0" border="1">
+
+
+<br>
+    
+    
+    %for id,mesto,tip in igrisca:
+        <tr>
+            <td>{{mesto}}</td>
+            <td>{{tip}}</td>
+            %if stanje != 0:
+            <td><a href="{{ROOT}}igrisca/{{id}}">Rezerviraj</td>
+            %end        
+        </tr>
+    %end
+    </table>
+
+
+
+
+
+
+
+
+
+

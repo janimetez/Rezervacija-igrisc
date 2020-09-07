@@ -1,0 +1,36 @@
+% rebase('base.html', ROOT=ROOT, stanje=stanje)
+
+
+
+
+<h2>Pozdravljeni!</h2>
+<h3>Če želite rezervirati igrišče v kraju {{kraj}} za šport {{tip}}, izpolnite spodnji obrazec. Vaša rezervacija ne sme biti daljša od dveh ur. Rezervirati morate vsaj 15 minut pred začetkom vadbe.
+Dovolimo največ eno rezervacijo na igrišče.</h3>
+<h4>Obrazec izpolnite v obliki: "Dan.Mesec.Leto Ura:Minute"</h4>
+%if napaka == 1:
+    <h4>Neveljaven vnos časa, prosim preverite da je v pravi obliki.</h4>
+%end
+
+%if napaka == 2:
+    <h4>Žal je ta termin zasede, izberite drugega.</h4>
+%end
+
+<div align="center">
+
+<form action='{{ROOT}}igrisce/{{oznaka}}' class="form-signin text-center" method='post' style="width: 30%;margin-top: 5cm">
+    <div class="h3 mb-3 font-weight-normal">
+    <span>Začetek:</span><input name='zacetek' type='text' value=''/>
+    <br>
+    <span>Konec:</span><input name='konec' type='text' value=''/>
+    <br>
+    <input value='Rezerviraj' type='submit' />
+</form>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+% rebase('base.html', ROOT=ROOT, stanje=stanje)
+
+
+<h2>Pozdravljeni!</h2>
+<h3>Spodaj so vaše rezervacije</h3>
+
+<table cellpadding="0" cellspacing="0" border="1">
+<tr>
+    <td>ID igrišča </td>
+    <td>Začetek</td>
+    <td>Konec</td>
+    <td>Odstrani</td>
+</tr>
+
+<br>
+    
+    
+    %for id_igrisca,zacetek,konec in rezervacije:
+        <tr>
+            <td><a href="{{ROOT}}igrisca/{{id_igrisca}}">{{id_igrisca}}</td>
+            <td>{{zacetek}}</td>
+            <td>{{konec}}</td>
+            <form action='{{ROOT}}odstrani/{{id_igrisca}}' class="form-signin text-center" method='post' style="width: 30%;margin-top: 5cm">
+            <th><input value='Odstrani' type='submit' /></th>
+            </form>    
+        </tr>
+    %end
+    </table>
