@@ -282,7 +282,7 @@ def rezervacije():
             pomozni.append(i['id_igrisca'])
             pomozni.append(i['cas_zacetka'])
             pomozni.append(i['cas_zakljucka'])
-    seznam.append(pomozni)
+            seznam.append(pomozni)
     return rtemplate('moje_rezervacije.html', stanje = stanje, rezervacije = seznam)
 
 
